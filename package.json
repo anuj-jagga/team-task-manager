@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "Collaborative Team Task Manager - Modular Microservices Layout",
   "scripts": {
-    "start": "npm start --prefix backend",
+    "start": "node backend/server.js",
     "server": "npm start --prefix backend",
     "client": "npm run dev --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "npm run build --prefix frontend",
+    "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
     "install-all": "npm install && npm install --prefix backend && npm install --prefix frontend"
   },
   "devDependencies": {
